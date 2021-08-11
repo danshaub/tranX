@@ -3,8 +3,7 @@
 test_file="data/django/test.bin"
 
 python exp.py \
-	--cuda \
-    --mode test \
+	    --mode test \
     --load_model $1 \
     --beam_size 15 \
     --test_file ${test_file} \

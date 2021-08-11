@@ -24,8 +24,7 @@ mkdir -p logs/django
 echo commit hash: `git rev-parse HEAD` > logs/django/${model_name}.log
 
 python exp.py \
-    --cuda \
-    --seed ${seed} \
+        --seed ${seed} \
     --mode train \
     --batch_size 10 \
     --asdl_file asdl/lang/py/py_asdl.txt \

@@ -21,9 +21,8 @@ echo "**** Writing results to logs/atis/${model_name}.log ****"
 mkdir -p logs/atis
 echo commit hash: `git rev-parse HEAD` > logs/atis/${model_name}.log
 
-python -u exp.py \
-    --cuda \
-    --seed ${seed} \
+python3 -u exp.py \
+        --seed ${seed} \
     --mode train \
     --batch_size 10 \
     --asdl_file asdl/lang/lambda_dcs/lambda_asdl.txt \
@@ -49,7 +48,7 @@ python -u exp.py \
     --lr_decay ${lr_decay} \
     --beam_size ${beam_size} \
     --decode_max_time_step 110 \
-    --log_every 50 \
+    --log_every 1 \
     --save_to saved_models/atis/${model_name} 2>&1 | tee -a logs/atis/${model_name}.log
 
 . scripts/atis/test.sh saved_models/atis/${model_name}.bin 2>&1 | tee -a logs/atis/${model_name}.log

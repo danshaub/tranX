@@ -25,8 +25,7 @@ mkdir -p logs/conala
 echo commit hash: `git rev-parse HEAD` > logs/conala/${model_name}.log
 
 python -u exp.py \
-    --cuda \
-    --seed ${seed} \
+        --seed ${seed} \
     --mode train_reconstructor \
     --batch_size ${batch_size} \
     --evaluator conala_evaluator \

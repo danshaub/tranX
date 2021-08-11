@@ -26,8 +26,7 @@ mkdir -p logs/geo
 echo commit hash: `git rev-parse HEAD` > logs/geo/${model_name}.log
 
 python -u exp.py \
-    --cuda \
-    --seed ${seed} \
+        --seed ${seed} \
     --mode train \
     --batch_size ${batch_size} \
     --asdl_file asdl/lang/lambda_dcs/lambda_asdl.txt \

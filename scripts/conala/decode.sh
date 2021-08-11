@@ -4,8 +4,7 @@ decode_file=$1
 model_file=$2
 
 python exp.py \
-    --cuda \
-    --mode test \
+        --mode test \
     --load_model "${model_file}" \
     --beam_size 15 \
     --test_file "${decode_file}" \

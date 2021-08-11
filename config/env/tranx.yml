@@ -120,4 +120,5 @@ dependencies:
   - xlrd
   - xlwt
   - nltk
-  - astor
+  - astor==0.7.1
+  - xgboost

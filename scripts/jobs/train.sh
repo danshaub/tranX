@@ -26,8 +26,7 @@ mkdir -p logs/jobs
 echo commit hash: `git rev-parse HEAD` > logs/jobs/${model_name}.log
 
 python -u exp.py \
-    --cuda \
-    --seed ${seed} \
+        --seed ${seed} \
     --mode train \
     --batch_size ${batch_size} \
     --asdl_file asdl/lang/prolog/prolog_asdl.txt \

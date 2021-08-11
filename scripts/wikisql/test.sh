@@ -3,8 +3,7 @@
 model_name=$(basename $1)
 
 python exp.py \
-    --cuda \
-    --mode test \
+        --mode test \
     --load_model $1 \
     --beam_size 5 \
     --parser wikisql_parser \
