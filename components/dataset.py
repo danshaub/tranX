@@ -120,6 +120,7 @@ class Batch(object):
         self.apply_rule_mask = []
         self.primitive_idx_matrix = []
         self.gen_token_mask = []
+        self.src_token_mask = torch.gt(self.src_token_mask, 0)
         self.primitive_copy_mask = []
         self.primitive_copy_token_idx_mask = np.zeros((self.max_action_num, len(self), max(self.src_sents_len)), dtype='float32')
 
